@@ -1,11 +1,11 @@
 import 'Frontend/demo/init'; // hidden-source-line
 import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { applyTheme } from 'Frontend/generated/theme';
 import '@vaadin/integer-field';
-import './login-overlay-mockup';
+import '@vaadin/login';
+import { applyTheme } from 'Frontend/generated/theme';
 
-@customElement('login-overlay-custom-field')
+@customElement('login-overlay-custom-form-area')
 export class Example extends LitElement {
   protected override createRenderRoot() {
     const root = super.createRenderRoot();
@@ -16,13 +16,16 @@ export class Example extends LitElement {
 
   protected override render() {
     return html`
-      <login-overlay-mockup>
+      <!-- tag::snippet[] -->
+      <!-- no-autofocus is used to prevent the example from stealing focus when browsing the documentation -->
+      <vaadin-login-overlay opened no-autofocus>
         <vaadin-integer-field
-          slot="custom-fields"
+          slot="custom-form-area"
           name="code"
           label="One-time code"
         ></vaadin-integer-field>
-      </login-overlay-mockup>
+      </vaadin-login-overlay>
+      <!-- end::snippet[] -->
     `;
   }
 }

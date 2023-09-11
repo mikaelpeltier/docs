@@ -122,7 +122,7 @@ export class LoginOverlayMockupElement extends LitElement {
         </section>
       </div>
       <div hidden>
-        <slot name="custom-fields" @slotchange="${this._onSlotChange}"></slot>
+        <slot name="custom-form-area" @slotchange="${this._onSlotChange}"></slot>
         <slot name="footer" @slotchange="${this._onSlotChange}"></slot>
       </div>
     `;

@@ -199,9 +199,9 @@ endif::[]
 --
 
 [role="since:com.vaadin:vaadin@V24.2"]
-=== Custom Fields
-Overlay supports adding custom fields in addition to username and password.
-Custom fields are shown above the "Submit" button.
+=== Custom Form Area
+Overlay provides a custom form area for adding more fields in addition to username and password.
+This area is placed above the "Submit" button.
 Use `name` attribute to ensure custom field `value` gets submitted with the form.
 
 [.example.render-only.merge]
@@ -209,14 +209,14 @@ Use `name` attribute to ensure custom field `value` gets submitted with the form
 ifdef::lit,flow[]
 [source,typescript]
 ----
-include::{root}/frontend/demo/component/login/login-overlay-custom-field-preview.ts[render,group=TypeScript]
+include::{root}/frontend/demo/component/login/login-overlay-custom-form-area-preview.ts[render,group=TypeScript]
 ----
 endif::[]
 
 ifdef::react[]
 [source,tsx]
 ----
-include::{root}/frontend/demo/component/login/react/login-overlay-custom-field-preview.ts[render,tags=snippet,indent=0,group=React]
+include::{root}/frontend/demo/component/login/react/login-overlay-custom-form-area-preview.ts[render,tags=snippet,indent=0,group=React]
 ----
 endif::[]
 --
@@ -227,21 +227,21 @@ endif::[]
 ifdef::lit[]
 [source,typescript]
 ----
-include::{root}/frontend/demo/component/login/login-overlay-custom-field.ts[tags=snippet,indent=0,group=TypeScript]
+include::{root}/frontend/demo/component/login/login-overlay-custom-form-area.ts[tags=snippet,indent=0,group=TypeScript]
 ----
 endif::[]
 
 ifdef::flow[]
 [source,java]
 ----
-include::{root}/src/main/java/com/vaadin/demo/component/login/LoginOverlayCustomField.java[tags=snippet,indent=0,group=Java]
+include::{root}/src/main/java/com/vaadin/demo/component/login/LoginOverlayCustomFormArea.java[tags=snippet,indent=0,group=Java]
 ----
 endif::[]
 
 ifdef::react[]
 [source,tsx]
 ----
-include::{root}/frontend/demo/component/login/react/login-overlay-custom-field.tsx[tags=snippet,indent=0,group=React]
+include::{root}/frontend/demo/component/login/react/login-overlay-custom-form-area.tsx[tags=snippet,indent=0,group=React]
 ----
 endif::[]
 --

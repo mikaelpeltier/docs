@@ -8,7 +8,7 @@ function Example() {
   return (
     // tag::snippet[]
     <LoginOverlay>
-      <IntegerField slot="custom-fields" name="code" label="One-time code" />
+      <IntegerField slot="custom-form-area" name="code" label="One-time code" />
     </LoginOverlay>
     // end::snippet[]
   );

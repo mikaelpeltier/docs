@@ -6,16 +6,15 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.textfield.IntegerField;
 import com.vaadin.flow.router.Route;
 
-@Route("login-overlay-custom-field")
-public class LoginOverlayCustomField extends Div {
+@Route("login-overlay-custom-form-area")
+public class LoginOverlayCustomFormArea extends Div {
 
-    public LoginOverlayCustomField() {
+    public LoginOverlayCustomFormArea() {
         // tag::snippet[]
         LoginOverlay loginOverlay = new LoginOverlay();
         IntegerField code = new IntegerField("One-time code");
         code.getElement().setAttribute("name", "code");
-        code.getElement().setAttribute("slot", "custom-fields");
-        loginOverlay.getCustomFields().add(code);
+        loginOverlay.getCustomFormArea().add(code);
         // end::snippet[]
         add(loginOverlay);
         loginOverlay.setOpened(true);
@@ -24,6 +23,6 @@ public class LoginOverlayCustomField extends Div {
         loginOverlay.getElement().setAttribute("no-autofocus", "");
     }
 
-    public static class Exporter extends DemoExporter<LoginOverlayCustomField> { // hidden-source-line
+    public static class Exporter extends DemoExporter<LoginOverlayCustomFormArea> { // hidden-source-line
     } // hidden-source-line
 }
